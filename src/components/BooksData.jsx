@@ -11,9 +11,9 @@ const BooksData = () => {
 
   return (
     <div className='App'>
-      <h1>Game of Thrones Books</h1>
+      <h1 data-cy='title'>Game of Thrones Books</h1>
       <div>
-        <button className='fetch-button' onClick={fetchData}>Books Details</button>
+        <button className='fetch-button' data-cy='books-details' onClick={fetchData}>Books Details</button>
         <br />
       </div>
       <div className='books'>
@@ -23,13 +23,13 @@ const BooksData = () => {
               const releasedDate = new Date(book.released).toDateString();
               return (
                 <div className='book'>
-                  <h3>Book {index + 1}</h3>
-                  <h2>{book.name}</h2>
+                  <h3 data-cy='book-number'>Book {index + 1}</h3>
+                  <h2 data-cy='book-name'>{book.name}</h2>
                   <div className='details'>
-                    <p>👨:{book.authors} </p>
-                    <p>📖: {book.numberOfPages} </p>
-                    <p>🏘️:{book.country} </p>
-                    <p>⏰:{releasedDate}  </p>
+                    <p data-cy='author'>👨:{book.authors} </p>
+                    <p data-cy='number-of-pages'>📖: {book.numberOfPages} </p>
+                    <p data-cy='country'>🏘️:{book.country} </p>
+                    <p data-cy='release-date'>⏰:{releasedDate}  </p>
                   </div>
                 </div>
               );
