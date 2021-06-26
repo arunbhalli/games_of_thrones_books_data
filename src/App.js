@@ -1,12 +1,12 @@
 
-
-
-function App() {
-
-  return
-   <div className='App'>
-   Hello World
-   </div>;
+import React from 'react'
+import BooksData from './components/BooksData'
+const App = () => {
+  return (
+    <div>
+    <BooksData/>
+    </div>
+  )
 }
 
-export default App;
+export default App
